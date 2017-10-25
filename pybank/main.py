@@ -61,14 +61,28 @@ with open(csvpath) as revenue_data:
 #calculates the average change over the period
 avg_delta=avg_delta-exclude
 delta_percentage=avg_delta/(month_count-1)
-#outputs the results
+
+#outputs the results and closes the output file
+
+text_file = open(output_file, "w")
 print("  ")
+text_file.write(" \n")
 print("--------------------------------------------------------------------")
+text_file.write("-------------------------------------------------------------------- \n")
 print(" Financial Analysis")
+text_file.write("  Financial Analysis \n")
 print("--------------------------------------------------------------------")
+text_file.write("-------------------------------------------------------------------- \n")
 print("Total number of months in period: " + str(month_count))
+text_file.write("Total number of months in period: " + str(month_count) + "\n")
 print("Total Revenue in period: $ " + str(total_revenue))
+text_file.write("Total Revenue in period: $ " + str(total_revenue) + "\n")
 print("Average monthly change in Revenue : $" + str(delta_percentage))
+text_file.write("Average monthly change in Revenue : $" + str(delta_percentage) + "\n")
 print("Greatest monthly increase in Revenue : " + str(gain_date) + "   $ " + str(lrg_gain))
+text_file.write("Greatest monthly increase in Revenue : " + str(gain_date) + "   $ " + str(lrg_gain) + "\n")
 print("Largest monthly decrease in Revenue : " + str(loss_date) + "   $ " + str(lrg_loss))
+text_file.write("Largest monthly decrease in Revenue : " + str(loss_date) + "   $ " + str(lrg_loss) + "\n")
 print("--------------------------------------------------------------------")
+text_file.write("-------------------------------------------------------------------- \n")
+text_file.close()

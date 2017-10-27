@@ -29,7 +29,6 @@ loss_date="unknown"
 gain_date="unknown"
 lrg_gain=0
 avg_delta = 0
-temp=0
 current_month_rev=0
 prior_month_rev=0
 delta=0
